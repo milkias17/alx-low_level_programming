@@ -9,11 +9,19 @@
 int main(void)
 {
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	int i = 0;
 
-	for (int i = 0; i < 26; i++)
-		putchar(alphabet[i]);
-	for (int i = 0; i < 26; i++)
-		putchar(toupper(alphabet[i]));
+	while (i < 26)
+	{
+		putchar(alphabet[i++]);
+	}
+
+	i = 0;
+
+	while (i < 26)
+	{
+		putchar(toupper(alphabet[i++]));
+	}
 	putchar('\n');
 
 	return (0);
