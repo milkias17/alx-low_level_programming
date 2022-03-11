@@ -8,9 +8,19 @@
 
 int main(void)
 {
-	for (int i = 0x00; i <= 0xf; i++)
-		putchar(i);
+	int i = 0;
 
-	/* putchar('\n'); */
+	while (i <= 0x0f)
+	{
+		if (i <= 0x09)
+		{
+			putchar(i++ + '0');
+		} else
+		{
+			putchar(i++ % 10 + 'a');
+		}
+	}
+	putchar('\n');
+
 	return (0);
 }

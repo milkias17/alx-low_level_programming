@@ -8,16 +8,15 @@
 
 int main(void)
 {
+	int i = 0;
 
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 25;
-
-	while (i >= 0)
+	while (i < 10)
 	{
-		putchar(alphabet[i]);
-		i--;
+		putchar(i++ + '0');
+		if (i <= 9)
+			putchar(',');
+		putchar(' ');
 	}
 	putchar('\n');
-
 	return (0);
 }
