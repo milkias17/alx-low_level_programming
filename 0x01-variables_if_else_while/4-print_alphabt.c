@@ -9,13 +9,17 @@
 int main(void)
 {
 	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+	int i = 0;
 
-	for (int i = 0; i < 26; i++)
+	while (i < 26)
 	{
 		if (alphabet[i] == 'e' || alphabet[i] == 'q')
+		{
+			i++;
 			continue;
-
+		}
 		putchar(alphabet[i]);
+		i++;
 	}
 
 	putchar('\n');
