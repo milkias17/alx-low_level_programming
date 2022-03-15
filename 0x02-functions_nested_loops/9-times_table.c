@@ -1,29 +1,37 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
-	* printNumAsChar - prints an integer as a char
-	* @num: number
+	* printProductAsChar - prints an integer as a char
+	* @num1: number
+	* @num2: number
 	* Description: prints an integer as a char
 	* Return: void
 */
 
-void printNumAsChar(int num)
+void printProductAsChar(int num1, int num2)
 {
-	if (num <= 9)
+	int result = num1 * num2;
+
+	if (num2 == 0)
+	{
+		_putchar(result + '0');
+	}
+	else if (result <= 9)
 	{
 		_putchar(' ');
-		_putchar(num + '0');
+		_putchar(result + '0');
 	}
 	else
 	{
 		char digit1;
-		char digit2 = (num % 10) + '0';
+		char digit2 = (result % 10) + '0';
 
-		while (num >= 10)
+		while (result >= 10)
 		{
-			num = num / 10;
+			result = result / 10;
 		}
-		digit1 = num + '0';
+		digit1 = result + '0';
 		_putchar(digit1);
 		_putchar(digit2);
 	}
@@ -45,10 +53,8 @@ void times_table(void)
 
 		while (j <= 9)
 		{
-			int result = i * j;
-
-			printNumAsChar(result);
-			if (j == 9 && i != 9)
+			printProductAsChar(i, j);
+			if (j == 9)
 			{
 				_putchar('\n');
 			}
