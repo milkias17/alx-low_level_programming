@@ -48,7 +48,7 @@ void times_table(void)
 			int result = i * j;
 
 			printNumAsChar(result);
-			if (j == 9)
+			if (j == 9 && i != 9)
 			{
 				_putchar('\n');
 			}
