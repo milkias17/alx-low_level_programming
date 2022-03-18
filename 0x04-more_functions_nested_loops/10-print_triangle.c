@@ -11,6 +11,12 @@ void print_triangle(int size)
 	int n = 1;
 	int i;
 
+	if (size == 0)
+	{
+		_putchar('\n');
+		return;
+	}
+
 	while (n <= size)
 	{
 		i = 0;
