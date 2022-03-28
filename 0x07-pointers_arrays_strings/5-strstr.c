@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
 	* _strstr - finds the first occurrence of the substring in string
@@ -14,31 +15,24 @@ char *_strstr(char *haystack, char *needle)
 	while (haystack[i] != '\0')
 	{
 		int j = 0;
-		int first_pos;
-		int completed = 1;
 
 		while (needle[j] != '\0')
 		{
-			if (haystack[i + j] != '\0' && haystack[i + j] == needle[j])
+			if (haystack[i + j] == needle[j])
 			{
-				if (j == 0)
-				{
-					first_pos = i;
-				}
 				j++;
 			}
 			else
 			{
-				completed = 0;
 				break;
 			}
 		}
-		if (completed)
+		if (needle[j] == '\0')
 		{
-			return (&haystack[first_pos]);
+			return (&haystack[i]);
 		}
 		i++;
 	}
 
-	return (0);
+	return (NULL);
 }
