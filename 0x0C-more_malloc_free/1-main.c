@@ -17,5 +17,8 @@ int main(void)
 	concat = string_nconcat("Hello", "", 10);
 	printf("%s\n", concat);
 	free(concat);
+	concat = string_nconcat(NULL, "banks are aweful", 7);
+	printf("%s\n", concat);
+	free(concat);
     return (0);
 }
