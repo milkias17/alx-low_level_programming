@@ -2,6 +2,7 @@
 
 /**
 	* free_dlistint - frees a doubly linked list
+	* @head: head of doubly linked list
 	* Description: frees a doubly linked list
 	* Return: void
 */

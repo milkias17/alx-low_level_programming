@@ -2,6 +2,7 @@
 
 /**
 	* sum_dlistint - returns sum of all nodes in dlist
+	* @head: head of linked list
 	* Description:  returns sum of all nodes in dlist
 	* Return: int
 */
