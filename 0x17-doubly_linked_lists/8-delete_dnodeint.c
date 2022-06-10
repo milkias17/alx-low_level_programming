@@ -2,6 +2,8 @@
 
 /**
 	* delete_dnodeint_at_index - deletes node at index of dlist
+	* @head: head of doubly linked list
+	* @index: index of node to delete
 	* Description: deletes node at index of dlist
 	* Return: status code
 */
