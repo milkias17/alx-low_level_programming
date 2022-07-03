@@ -74,6 +74,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (key_exists(ht, key) == 1)
 		{
 			update_hash_table(ht, key, value);
+			free(new->key);
+			free(new->value);
+			free(new);
+			return (1);
 		}
 
 		if (ht->array[index] == NULL)
