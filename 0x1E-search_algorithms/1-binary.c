@@ -3,6 +3,10 @@
 
 /**
 	* b_search - recursive binary search
+	* @array: array to operate on
+	* @start: start of current sub array
+	* @end: end of current sub array
+	* @value: value to search for
 	* Description: recursive binary search
 	* Return: int
 */
@@ -47,5 +51,5 @@ int b_search(int *array, int start, int end, int value)
 */
 int binary_search(int *array, size_t size, int value)
 {
-	return b_search(array, 0, (int)size - 1, value);
+	return (b_search(array, 0, (int)size - 1, value));
 }
